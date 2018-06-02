@@ -1,0 +1,628 @@
+{
+	"info": {
+		"_postman_id": "0b3dc1fc-ea19-467e-8989-2986de77f13b",
+		"name": "backend-setup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "David Beckham",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Beckham07",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "082228611626",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "roles",
+							"value": "User",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "beckham.david@gmail.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "RENTCAR"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjgsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvYmFja2VuZC1zZXR1cC1sdW1lbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1MjY5NzYxMzksImV4cCI6MTUyNzA2MjUzOSwibmJmIjoxNTI2OTc2MTM5LCJqdGkiOiIweUJMNTFqYTlRV09mUnJaIn0.fpXpHRb8MXRg_hoUaBWvGAAkeQWPjKM3k414UyKlFlc"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Beckham",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Beckham23",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": " Leytonstone, London",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "England",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "02-05-1975",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/me/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"me",
+						"update"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Change Picture",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjgsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvYmFja2VuZC1zZXR1cC1sdW1lbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1MjY5NzYxMzksImV4cCI6MTUyNzA2MjUzOSwibmJmIjoxNTI2OTc2MTM5LCJqdGkiOiIweUJMNTFqYTlRV09mUnJaIn0.fpXpHRb8MXRg_hoUaBWvGAAkeQWPjKM3k414UyKlFlc"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/me/changepicture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"me",
+						"changepicture"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "beckham.david@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Bismillah91",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Request Phone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Beckham23",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/auth/request_phone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"auth",
+						"request_phone"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Phone",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjgsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvYmFja2VuZC1zZXR1cC9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1MjY5NjIxMzMsImV4cCI6MTUyNzA0ODUzMywibmJmIjoxNTI2OTYyMTMzLCJqdGkiOiJwS1RrRFFrd2YxRUZlVjZPIn0.SEdakbJTZaJlsmBpC_k6bXsg7ISHMbmBC5PCrsJd_lc"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Kroos08",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "pin",
+							"value": "7051",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PATCH",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/auth/verify_phone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"auth",
+						"verify_phone"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Request Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Beckham23",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/auth/request_email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"auth",
+						"request_email"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/auth/verify_email/OQdt0KNrRxTJrXdPoa9mXNjsgLKVEXY548h5VbyxjdI6YFx7nqacA6ZgKE0b3fMVHy33EhyHxxnjPaLFgVxNTlqA76dgkwLMTD35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"auth",
+						"verify_email",
+						"OQdt0KNrRxTJrXdPoa9mXNjsgLKVEXY548h5VbyxjdI6YFx7nqacA6ZgKE0b3fMVHy33EhyHxxnjPaLFgVxNTlqA76dgkwLMTD35"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Request Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "beckham.david@gmail.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/auth/request_forgot_password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"auth",
+						"request_forgot_password"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "repeat_password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/auth/forgot_password/OQdt0KNrRxTJrXdPoa9mXNjsgLKVEXY548h5VbyxjdI6YFx7nqacA6ZgKE0b3fMVHy33EhyHxxnjPaLFgVxNTlqA76dgkwLMTD35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"auth",
+						"forgot_password",
+						"OQdt0KNrRxTJrXdPoa9mXNjsgLKVEXY548h5VbyxjdI6YFx7nqacA6ZgKE0b3fMVHy33EhyHxxnjPaLFgVxNTlqA76dgkwLMTD35"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "082228611625",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/auth/reset_password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"auth",
+						"reset_password"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjgsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvYmFja2VuZC1zZXR1cC1sdW1lbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1MjY5NzYxMzksImV4cCI6MTUyNzA2MjUzOSwibmJmIjoxNTI2OTc2MTM5LCJqdGkiOiIweUJMNTFqYTlRV09mUnJaIn0.fpXpHRb8MXRg_hoUaBWvGAAkeQWPjKM3k414UyKlFlc"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "new_password",
+							"value": "Bismillah91",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "repeat_new_password",
+							"value": "Bismillah91",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PATCH",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/me/changepassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"me",
+						"changepassword"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Log Out",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjgsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvYmFja2VuZC1zZXR1cC1sdW1lbi9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1MjY5NzYxMzksImV4cCI6MTUyNzA2MjUzOSwibmJmIjoxNTI2OTc2MTM5LCJqdGkiOiIweUJMNTFqYTlRV09mUnJaIn0.fpXpHRb8MXRg_hoUaBWvGAAkeQWPjKM3k414UyKlFlc"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/me/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"me",
+						"logout"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Collection User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjgsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvYmFja2VuZC1zZXR1cC9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1MjcwNTA2MjYsImV4cCI6MTUyNzEzNzAyNiwibmJmIjoxNTI3MDUwNjI2LCJqdGkiOiJJdHZwaWxoZUtDRDEzdWlwIn0.yo8_Y4YOWE7AnrSW8CWW6SEweJhgyiwHyZxvTm1NYOw"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/profiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"profiles"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		},
+		{
+			"name": "Detail User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjgsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvYmFja2VuZC1zZXR1cC9wdWJsaWMvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE1MjcwNTA2MjYsImV4cCI6MTUyNzEzNzAyNiwibmJmIjoxNTI3MDUwNjI2LCJqdGkiOiJJdHZwaWxoZUtDRDEzdWlwIn0.yo8_Y4YOWE7AnrSW8CWW6SEweJhgyiwHyZxvTm1NYOw"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/backend-setup/public/api/profile/Beckham23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"backend-setup",
+						"public",
+						"api",
+						"profile",
+						"Beckham23"
+					]
+				},
+				"description": "USERS"
+			},
+			"response": []
+		}
+	]
+}
